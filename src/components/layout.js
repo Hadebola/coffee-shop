@@ -10,9 +10,14 @@ import PropTypes from "prop-types"
 
 import "./layout.css"
 import "bootstrap/dist/css/bootstrap.min.css"
-// import "./bootstrap.min.css"
+import { Navbar } from "./Globals/Navbar"
 
-const Layout = ({ children }) => <>{children}</>
+const Layout = ({ children }) => (
+  <>
+    <Navbar />
+    {children}
+  </>
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
